@@ -7,10 +7,11 @@ import java.util.regex.*;
 public class Fibonacci {
 
 		public static String isFibonacci(Long num){
-			Long a = (Long)Math.sqrt(5*num*num+4);
-			Long b = (Long)Math.sqrt(5*num*num-4);
+			Long a = (long)Math.sqrt(5*num*num+4);
+			Long b = (long)Math.sqrt(5*num*num-4);
+			//boolean isSquare = (a%1 == 0 || b%1 == 0);
 
-			if(Math.pow(a,2)==(5*num*num +4) || Math.pow(b,2)==(5*num*num -4)){
+			if(a%1 == 0 || b%1 == 0){
 				return "IsFibo";
 			}
 			else{
