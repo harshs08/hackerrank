@@ -3,9 +3,7 @@ public class QuickSort1 {
 
 	static void partition(int[] ar) {
 		int N = ar.length;
-		//if (N == 0) return;
 		int pivot = ar[0];
-		//int partitionIndex = 0;
 		ArrayList<Integer> left = new ArrayList<Integer>();
 		ArrayList<Integer> right = new ArrayList<Integer>();
 
