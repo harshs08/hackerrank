@@ -31,6 +31,7 @@ public class PalindromeIndex {
 				if(ch[j] != ch[k]){
 					if(isPalindrome(ch, j+1, k+1)) index = j;
 					else index = k;
+					break;
 				}
 			}
 		System.out.println(index);
