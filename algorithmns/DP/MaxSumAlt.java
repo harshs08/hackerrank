@@ -11,7 +11,11 @@ public class MaxSumAlt {
 		int current_sum = 0;
 		int best_sum_c = 0;
 		int best_sum_nc = 0;
-		int res[] = {0, 0};
+		int res[] = {arr[0], arr[0]};
+		if (arr.length == 1) {
+		res[0] = arr[0];
+		res[1] = arr[0];
+		}
 
 		for (int i=0; i<arr.length; i++ ) {
 			//logic to find max subsequence sum
