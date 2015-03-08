@@ -6,8 +6,20 @@ import java.util.regex.*;
 
 public class UnboundedKnapsack {
 
-	public static int knapsack(int[] arr, int k){
-		return 0;
+	public static int knapsack(int[] arr, int value){
+		int[] max = new int[value+1];
+		Arrays.fill(max, 0);
+		max[0] = 0;
+		for (int i=1; i<=value; i++ ) {
+			for (int j = 0; j<arr.length ; j++) {
+				if(arr[j]<= i){
+					if(max[i-arr[j]]+1 > max[i]){
+						max[i] = max[i-arr[j]]+1;
+					}
+				}
+			}
+		}
+		return max[value];
 	}
 
 
@@ -24,7 +36,7 @@ public class UnboundedKnapsack {
 			k = in.nextInt();
 			int[] array = new int[N];
 			for(int j = 0; j<N; j++){
-				array[j] = in.nextInt(); 
+				array[j] = in.nextInt();
 			}
 			testSolutions[i] = knapsack(array, k);
 		}
