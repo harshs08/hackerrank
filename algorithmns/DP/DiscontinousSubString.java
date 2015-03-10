@@ -1,4 +1,7 @@
 public class DiscontinousSubString{
+
+	//given two strings find the number of discontinous matches
+	//http://www.careercup.com/question?id=5757597581836288
 	public static int match (String target, String source){
 		int [][] f = new int[target.length() + 1][source.length() + 1];
 		for (int i = 0 ; i <= source.length() ; ++i) {
