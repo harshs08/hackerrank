@@ -19,6 +19,11 @@ public class UnboundedKnapsack {
 				}
 			}
 		}
+		for (int counter = 1; counter < max.length; counter++){
+			if (max[counter] > max){
+				max = decMax[counter];
+			}
+		}
 		return max[value];
 	}
 
